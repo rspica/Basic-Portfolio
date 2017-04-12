@@ -29,14 +29,14 @@ nav {
 	position: relative;
 }
 
-.navGroup li > a:hover {
+.navGroup li > a:hover:after {
 	color: rgb(200, 200, 200);
 	border-bottom: 1px solid rgb(100, 100, 100);
 	padding-bottom: 9px;
-/*	width: 15px;
+	width: 15px;
 	content: "";
 	display: block;
-	overflow: hidden;*/
+	overflow: hidden;
 }
 
 .navName {
@@ -159,6 +159,10 @@ begins footer contact section styles here -->
 
 .contact {
 	clear: left;
+}
+
+li > a {
+	display: inline-block;
 }
 
 
