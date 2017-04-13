@@ -8,61 +8,98 @@
 </head>
 
 <body>
-
-	<header>
-		<nav>
-			<h1 class="navBrand"><a href="./index.html">Robert Spica</a></h1>
-
-			<ul class="navGroup">
-				<li><a href="./index.html" class="navMain">about</a></li>
-				<li><a href="./portfolio.html" class="navMain">work</a></li>
-				<li><a href="./contact.html" class="navMain">connect</a></li>
-			</ul>
-		</nav>
+	<!-- start main Navigation container -->
+	<header class="navTop">
+		<h1 class="navBrand"><a href="./index.html" class="navMain navBrand">Robert Spica</a></h1>
+		<ul>
+			<li><a href="./index.html" class="navMain">about</a></li>
+			<li><a href="./portfolio.html" class="navMain">work</a></li>
+			<li><a href="./contact.html" class="navMain">connect</a></li>
+		</ul>
 	</header>
-	
+
+	<!-- start intro container -->
 	<main>
-		<article class="bioCont">
-			<section class="bioCopy">
+		<article class="introCont">
+			<section class="introCopy">
 				<p>I am a New York City based designer currently working on fullstack development.</p>
 			</section>
 			<section>
-				<img class="bioPict" src="" alt="picture of robert">
+				<img src="./images/BW-city-skyline-LRG.png" id="introImage" alt="picture of NYC skyline" />
 			</section>
 		</article>
-			
-			<section id="work">
 
-				<article class="projCont"><!-- start project-container project 1 -->
-					<a class="projThumb" href="#">
-						 <div class="projTitle">
-             				<h3>Project 1</h3>  
-            				<p class="descript">A single responsive web page built with HTML/CSS. First project...</p>
-          				 </div>
+<!-- end intro container // start project portfolio container -->
+
+		<article class="projContainer">
+			<div class="projRow">
+
+<!-- start project-container project 1 -->
+				<section class="projCol"><!-- start project portfolio item x-->
+					<a class="projThumb" href="#"><img src="http://placehold.it/350x240" alt="project 1">
+						<div class="project">
+							<h3 class="pTitle">Project 1</h3>  
+							<p class="pDescript">Lorem ipsum project description...</p>
+						</div>
 					</a>
-				</article><!-- end project-container project 1 -->
+				</section>
+<!-- end project-container project 1 // start project-container project 2 -->
 
-				<article class="projCont">
-					<a class="projThumb" href="#">
-						 <div class="projTitle">
-             				<h3>Project 1</h3>  
-            				<p class="descript">This is a description for a second project. it might have more copy we will see soon.</p>
-          				 </div>
+				<section class="projCol">
+					<a class="projThumb" href="#"><img src="http://placehold.it/350x240" alt="project 2">
+						<div class="project">
+							<h3 class="pTitle">Project 2</h3>  
+							<p class="pDescript">Lorem ipsum project description...</p>
+						</div>
 					</a>
-				</article>
-				<article class="projCont">
-					<a class="projThumb" href="#">
-						 <div class="projTitle">
-             				<h3>Project 1</h3>  
-            				<p class="descript">A single responsive web page built with HTML/CSS. this is my first project... E-V-E-R!</p>
-          				 </div>
+				</section>
+<!-- end project-container project 2 // start project-container project 3 -->
+
+				<section class="projCol">
+					<a class="projThumb" href="#"><img src="http://placehold.it/350x240" alt="project 3">
+						<div class="project">
+							<h3 class="pTitle">Project 3</h3>  
+							<p class="pDescript">Lorem ipsum project description...</p>
+						</div>
 					</a>
-				</article>
-			</section>
+				</section>
+<!-- end project-container project 3 // start project-container project 4 -->
 
+				<section class="projCol">
+					<a class="projThumb" href="#"><img src="http://placehold.it/350x240" alt="project 4">
+						<div class="project">
+							<h3 class="pTitle">Project 4</h3>  
+							<p class="pDescript">Lorem ipsum project description...</p>
+						</div>
+					</a>
+				</section>
+<!-- end project-container project 4 // start project-container project 5 -->
 
-		<section>
-			<aside>
+				<section class="projCol">
+					<a class="projThumb" href="#"><img src="http://placehold.it/350x240" alt="project 5">
+						<div class="project">
+							<h3 class="pTitle">Project 5</h3>  
+							<p class="pDescript">Lorem ipsum project description...</p>
+						</div>
+					</a>
+				</section>
+<!-- end project-container project 5 // start project-container project 6 -->
+
+				<section class="projCol">
+					<a class="projThumb" href="#"><img src="http://placehold.it/350x240" alt="project 6">
+						<div class="project">
+							<h3 class="pTitle">Project 6</h3>  
+							<p class="pDescript">Lorem ipsum project description...</p>
+						</div>
+					</a>
+				</section>
+<!-- end project-container project 6 -->
+
+			</div>
+		</article>
+
+<!-- end project-portfolio container // start contact-connect container -->
+		<section class="contactCont">
 				<ul class="contact">
 					<li>
 						<a href="mailto:robertspica@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> email</a>
@@ -80,9 +117,8 @@
 						<a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i> linkedin</a>
 					</li>
 				</ul>
-			</aside>
-
 		</section>
+
 	</main>
 </body>
 </html>

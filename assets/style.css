@@ -1,72 +1,50 @@
 body {
 	font: 14px 'Montserrat', sans-serif;
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 /* ------------------------------------------
 begins main header navigation styles here -->
 ------------------------------------------- */
-nav {
-	padding: 20px 50px 70px 50px;
-	font: 300 1.1em 'Montserrat', sans-serif;
+.navTop {
+	padding: 25px 5%;
+	margin-bottom: 50px;
+	font: 300 1em 'Montserrat', sans-serif;
 	overflow: auto;
 }
 
-.navBrand a {
-	color: #000;
+.navMain {
+	margin-top: 25px;
+	color: rgb(0, 0, 0);
+}
+
+.navMain:hover {
+	color: rgb(200, 200, 200);
+}
+
+.navBrand {
 	float: left;
+	color: rgb(0, 0, 0);
 }
 
-.navBrand a:hover {
-	color: rgb(200, 200, 200);
-}
-
-.navGroup li > a {
+li > a {
 	display: inline-block;
+	padding-left: 20px;
+	color: rgb(0, 0, 0);
 	float: right;
-	margin-left: 25px;
-	padding-bottom: 11px;
-	color: #000;
-	position: relative;
 }
 
-.navGroup li > a:hover:after {
-	color: rgb(200, 200, 200);
+li > a:hover:after {
 	border-bottom: 1px solid rgb(100, 100, 100);
 	padding-bottom: 9px;
 	width: 15px;
 	content: "";
 	display: block;
-	overflow: hidden;
-}
-
-.navName {
-	padding: 1em 0;
-	color: #000;
-/*	animation: up-bump 0.4s ease;*/
-}
-
-.navName:hover {
-	color: rgb(100, 100, 100);
-/*	animation: down-bump 0.2s ease;*/
-}
-
-.navMain {
-
-/*	animation: up-bump 0.4s ease;*/
-}
-
-.navMain:hover {
-	
-/*	animation: down-bump 0.2s ease;*/
 }
 
 
 
-/*.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;	
-}*/
 /* ------------------------------------------
 this ends main header navigation styles 
 
@@ -74,107 +52,114 @@ begins about/bio section styles here -->
 ------------------------------------------- */
 main {
 	clear: both;
-}
-
-section > p {
- 	padding-bottom: 20px;
- }
-
-.bioCont {
-	background-image: url('../images/Robs.png');
-  	background-repeat: no-repeat;
+	margin-bottom: 100px;
 	overflow: auto;
 }
 
-.bioCopy {
-	height: 100%;
-	padding: 25px 50px 20px;
+
+.introCont {
 	position: relative;
-	font-size: 1.75em;
-	line-height: 1.5em;
-	color: #000;
-	width: 40%;
-	float: left;
+/*	background-image:url("../images/black-and-white-city-skyline-buildings.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;*/
+
 }
 
-.bioPict {
-	float: right;
+.introCopy {
+	position: absolute;
+	top: 20%;
+	max-width: 30%;
+	min-width: 320px;
+	font: 300 1.7em 'Montserrat', sans-serif;
+	padding-left: 5%;
 }
+
+#introImage {
+	margin: 0 auto;
+	width: 100%;
+	min-width: 835px;
+	height: auto;
+}
+
+
+
 
 /* ------------------------------------------
 this ends about styles 
 
-begins project/work section styles here -->
+begins project-portfolio section styles here -->
 ------------------------------------------- */
-
-.projCont {
-	padding-left:50px;
-	width: 300px;
-	height: 200px;
-	float: left;
+.projContainer {
+	padding: 75px 5% 0;
 }
 
-.projThumb {
-	position: relative;
-	margin: 0 25px 25px 0;
-	width: 300px;
-	height: 200px;
-
-	background: #eee;
-	float: left;
+.projRow {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
 }
 
-.projTitle {
+.projCol {
+	flex: 1;
+	max-width: 350px;
+	margin-bottom: 4em;
+	background: rgb(100, 200, 200);
+}
+
+
+
+.pTitle {
+	font: 300 1.2em 'Montserrat', sans-serif;
+}
+
+.pDescript {
+	font: 300 .8em/1.15em 'Overpass Mono', monospace;
+}
+
+.project {
 	display: none;
 }
 
-.projThumb:hover > .projTitle{
+.projThumb:hover > .project{
  	display: inline-block;
  	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	padding: 90px 50px;
 	color: rgba(255, 255, 255, .9);
-	font-size: 1.5em;
-	padding: 25px;
-	background: rgba(0, 0, 0, .6);
-	width: 300px;
-	height: 200px;
+	background: rgba(0, 0, 0, .7);
+	width: 350px;
+	height: 240px;
 	box-sizing: border-box;
 }
 
 
-.descript {
-	padding: 15px;
-
-	font: 300 .4em/1.15em 'Overpass Mono', monospace;
-}
-
 
 /* ------------------------------------------
-this ends Work styles 
+this ends project-portfolio styles 
 
-begins footer contact section styles here -->
+begins contect/connect section styles here -->
 ------------------------------------------- */
 
+
+
 .contact {
-	clear: left;
+	margin: 0 5%;
+	padding-top: 10px;
+	border-top: 1px solid #000;
 }
 
-li > a {
-	display: inline-block;
+.contact li > a {
+	float: left;
+
+}
+
+li:nth-child(1) {
+	padding-left: 0;
 }
 
 
 
-/* hover animations on the main nav */
-@keyframes up-bump {
-  0% { padding-top: 0; }
-  50% { padding-top: 1.5em; }
-  100% { padding-top: 0; }
-}
-@keyframes down-bump {
-  0% { padding-top: 0; }
-  50% { padding-top: 1.5em; }
-  100% { padding-top: 0; }
-}
+
