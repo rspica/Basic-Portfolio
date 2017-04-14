@@ -8,14 +8,12 @@ body {
 begins main header navigation styles here -->
 ------------------------------------------- */
 .navTop {
-	padding: 25px 5%;
-	margin-bottom: 50px;
+	padding: 50px 5%;
 	font: 300 1em 'Montserrat', sans-serif;
 	overflow: auto;
 }
 
 .navMain {
-	margin-top: 25px;
 	color: rgb(0, 0, 0);
 }
 
@@ -28,14 +26,13 @@ begins main header navigation styles here -->
 	color: rgb(0, 0, 0);
 }
 
-li > a {
-	display: inline-block;
-	padding-left: 20px;
+a {
+	padding-left: 30px;
 	color: rgb(0, 0, 0);
 	float: right;
 }
 
-li > a:hover:after {
+li a:hover:after {
 	border-bottom: 1px solid rgb(100, 100, 100);
 	padding-bottom: 9px;
 	width: 15px;
@@ -94,6 +91,7 @@ begins project-portfolio section styles here -->
 }
 
 .projRow {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -101,13 +99,12 @@ begins project-portfolio section styles here -->
 }
 
 .projCol {
+	position: relative;
 	flex: 1;
 	max-width: 350px;
+	/*flex-basis: 30%;*/
 	margin-bottom: 4em;
-	background: rgb(100, 200, 200);
 }
-
-
 
 .pTitle {
 	font: 300 1.2em 'Montserrat', sans-serif;
@@ -143,22 +140,96 @@ this ends project-portfolio styles
 begins contect/connect section styles here -->
 ------------------------------------------- */
 
-
-
 .contact {
 	margin: 0 5%;
 	padding-top: 10px;
 	border-top: 1px solid #000;
 }
 
-.contact li > a {
+ i{
+ 	margin-right: 10px;
+ }
+.fa {
+	color: rgb(200, 200, 200);
+}
+.contact li a {
 	float: left;
+	display: inline-block;
+}
 
+/* ------------------------------------------
+I can not get just the icon to change when hovering over the whole link -->
+------------------------------------------- */
+i:hover {
+	color: tomato;
 }
 
 li:nth-child(1) {
 	padding-left: 0;
 }
+
+
+
+
+/* ------------------------------------------
+this ends footer styles 
+
+begins contact page section styles here -->
+------------------------------------------- */
+*:focus{
+	outline: none;
+}
+
+.formCont {
+	width: 100%;
+	padding: 0 5%;
+
+}
+input, textarea, button {
+	border: none;
+
+}
+#name, #lastName, #eMail, #textarea {
+	padding: 10px 0;
+	margin-left: 25px;
+	margin-bottom: 50px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: rgb(225, 225, 225);
+}
+
+.button:hover {
+	padding: 20px;
+	margin-bottom: 50px;
+		font-size: 28px;
+	background-color: rgb(1, 254, 127);
+	color: rgb(0, 0, 0)
+
+}
+
+.button {
+	padding: 20px;
+	margin-bottom: 50px;
+	background-color: rgb(0, 175, 175);
+	color: rgb(200, 200, 200);
+	transition: color 1.5s ease-out .25s, background 1.5s ease-in .25s, font-size 1.5s ease-out .25s;;
+}
+
+.fa-paper-plane:hover {
+	color: rgb(200, 200, 200)
+}
+
+#myDisplay {
+	position: fixed;
+	top: 10px;
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+	background-color: rgba(0, 0, 0, .3)
+    margin-top:20px;
+}
+
 
 
 

@@ -18,21 +18,72 @@
 		</ul>
 	</header>
 
+
 	<!-- start contact container -->
 	<section class="formCont">
 		<form action="#" method="post">
-			<label for="first-name">First Name</label><br />
+		<fieldset>
+			<label for="first-name"></label><br />
 			<input type="text" id="name" name="first-name" placeholder="First Name">
 
-			<label for="last-name">Last Name</label>
-			<input type="text" name="last-name" placeholder="Last Name">
+			<label for="last-name"></label>
+			<input type="text" id="lastName" name="last-name" placeholder="Last Name">
 
 			<label for="email"></label>
+			<input type="text" id="eMail" name="e-mail" placeholder="name@example.com">
 
+<!-- for fun			<label for="location">location</label>
+				<select id="country" name="country">
+			 		<option value="New York City">New York CIty</option>
+					<option value="The rest of the place">The rest of the place</option>
+			    </select> -->
+
+			<label for="note"></label>
+			<textarea type="text" id="textarea" placeholder="Drop me a message"></textarea>
+		</fieldset>
 				
-			<input type="submit" class="button" name="sentIt">
-			<button type="submit" class="button">Send it <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+			
+			<button type="button" class="button" onclick="myMessage">Send it <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+
+			<div id="myDisplay">
+				<p>someday this form will really function</p>
+			</div>
 
 
 		</form>
 	</section>
+
+
+<!-- end project-portfolio container // start contact-connect container -->
+		<section class="contactCont">
+				<ul class="contact">
+					<li>
+						<a href="mailto:robertspica@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> email</a>
+					</li>
+
+					<li>
+						<a href=""><i class="fa fa-github" aria-hidden="true"></i> github</a>
+					</li>
+
+					<li>
+						<a href=""><i class="fa fa-stack-overflow" aria-hidden="true"></i> stack overflow</a>
+					</li>
+
+					<li>
+						<a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i> linkedin</a>
+					</li>
+				</ul>
+		</section>
+
+	<script type="text/javascript">
+		function myMessage() {
+    var x = document.getElementById('myDisplay');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+	</script>
+</body>
+</html>
