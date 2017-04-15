@@ -10,13 +10,15 @@ begins main header navigation styles here -->
 .navTop {
 	position: fixed;
 	top: 0;
-	width: 1280px;
+	width: 100%;
+	max-width: 1280px;
 	padding: 40px 5%;
-	margin: 0 auto;
+/*	margin: 0 auto;*/
 	font: 300 1em 'Montserrat', sans-serif;
 	background: rgba(255, 255, 255, .6);
-/*	box-sizing: border-box;*/
-	z-index: 99;
+	box-sizing: border-box;
+/*	z-index: 99;*/
+	overflow: hidden;
 }
 
 .navMain {
