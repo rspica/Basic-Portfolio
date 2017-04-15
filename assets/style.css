@@ -9,7 +9,6 @@ begins main header navigation styles here -->
 ------------------------------------------- */
 .navTop {
 	position: fixed;
-	top: 0;
 	width: 100%;
 	max-width: 1280px;
 	padding: 40px 5%;
@@ -17,7 +16,7 @@ begins main header navigation styles here -->
 	font: 300 1em 'Montserrat', sans-serif;
 	background: rgba(255, 255, 255, .6);
 	box-sizing: border-box;
-/*	z-index: 99;*/
+	z-index: 99;
 	overflow: hidden;
 }
 
@@ -109,7 +108,7 @@ begins project-portfolio section styles here -->
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: stretch;
+	align-items: flex-start;
 }
 
 .projCol {
@@ -158,13 +157,13 @@ begins contact/connect section styles here -->
 ------------------------------------------- */
 .contactCont {
 	position: relative;
+	margin: 80px 5%;
+	padding-top: 10px;
+	border-top: 1px solid #000;
 	z-index: 99;
 }
 .contact {
-	margin: 80px 5%;
-/*	margin-top: 80px;
-*/	padding-top: 10px;
-	border-top: 1px solid #000;
+	max-width: 50%;
 }
 
  i{
@@ -174,10 +173,15 @@ begins contact/connect section styles here -->
 .fa {
 	color: rgb(200, 200, 200);
 }
-
+.contact li {
+	position: relative;
+}
 .contact li a {
+	top: 10px;
 	float: left;
 	display: inline-block;
+	padding-bottom: 20px;
+
 }
 
 /* ------------------------------------------
@@ -189,6 +193,14 @@ i:hover
 
 li:nth-child(1) {
 	padding-left: 0;
+}
+
+.copyright {
+	position: absolute;
+	right: 5%;
+	float: right;
+	font-size: .7em;
+	color: rgb(200, 200, 200);
 }
 
 
@@ -204,14 +216,17 @@ begins project page section styles here -->
 ------------------------------------------- */
 .heroImg {
 	position: relative;
-	width: 100%;
-	height: auto;
+/*	width: 100%;*/
+/*	height: auto;*/
 	margin: 0 auto;
-	overflow: auto;
-	box-sizing: border-box;
+/*	overflow: auto;
+	box-sizing: border-box;*/
 	text-align: center;
 	background: rgb(100, 200, 200);
-
+}
+#mainImage {
+	width: 100%;
+	height: auto;
 }
 
 #projPage {
