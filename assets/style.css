@@ -8,9 +8,15 @@ body {
 begins main header navigation styles here -->
 ------------------------------------------- */
 .navTop {
-	padding: 50px 5%;
+	position: fixed;
+	top: 0;
+	width: 1280px;
+	padding: 40px 5%;
+	margin: 0 auto;
 	font: 300 1em 'Montserrat', sans-serif;
-	overflow: auto;
+	background: rgba(255, 255, 255, .6);
+/*	box-sizing: border-box;*/
+	z-index: 99;
 }
 
 .navMain {
@@ -26,7 +32,7 @@ begins main header navigation styles here -->
 	color: rgb(0, 0, 0);
 }
 
-a {
+li a {
 	padding-left: 30px;
 	color: rgb(0, 0, 0);
 	float: right;
@@ -48,6 +54,8 @@ this ends main header navigation styles
 begins about/bio section styles here -->
 ------------------------------------------- */
 main {
+	position: relative;
+	top: 110px;
 	clear: both;
 	margin-bottom: 100px;
 	overflow: auto;
@@ -56,7 +64,7 @@ main {
 
 .introCont {
 	position: relative;
-/*	background-image:url("../images/black-and-white-city-skyline-buildings.jpg");
+/*	background-image:url("../images/BW-city-skyline-LRG.png");
     background-repeat: no-repeat;
     background-size: 100% auto;*/
 
@@ -87,23 +95,30 @@ this ends about styles
 begins project-portfolio section styles here -->
 ------------------------------------------- */
 .projContainer {
-	padding: 75px 5% 0;
+	padding: 0 5%;
+}
+
+#projPage {
+	padding-bottom: 75px;
 }
 
 .projRow {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: stretch;
 }
 
 .projCol {
 	position: relative;
-	flex: 1;
-	max-width: 350px;
-	/*flex-basis: 30%;*/
-	margin-bottom: 4em;
+	box-sizing: border-box;
+/*	flex: 1;
+	max-width: 350px;*/
+	flex-basis: 30%;
+	margin-top: 75px;
+	margin-right: 25px;
+	background: rgb(100, 200, 200);
 }
 
 .pTitle {
@@ -137,21 +152,27 @@ begins project-portfolio section styles here -->
 /* ------------------------------------------
 this ends project-portfolio styles 
 
-begins contect/connect section styles here -->
+begins contact/connect section styles here -->
 ------------------------------------------- */
-
+.contactCont {
+	position: relative;
+	z-index: 99;
+}
 .contact {
-	margin: 0 5%;
-	padding-top: 10px;
+	margin: 80px 5%;
+/*	margin-top: 80px;
+*/	padding-top: 10px;
 	border-top: 1px solid #000;
 }
 
  i{
  	margin-right: 10px;
  }
+
 .fa {
 	color: rgb(200, 200, 200);
 }
+
 .contact li a {
 	float: left;
 	display: inline-block;
@@ -160,7 +181,7 @@ begins contect/connect section styles here -->
 /* ------------------------------------------
 I can not get just the icon to change when hovering over the whole link -->
 ------------------------------------------- */
-i:hover {
+i:hover 
 	color: tomato;
 }
 
@@ -169,10 +190,37 @@ li:nth-child(1) {
 }
 
 
+/* ------------------------------------------
+this begins specific page styles here -->
+------------------------------------------- */
 
 
 /* ------------------------------------------
 this ends footer styles 
+
+begins project page section styles here -->
+------------------------------------------- */
+.heroImg {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	overflow: auto;
+	box-sizing: border-box;
+	text-align: center;
+	background: rgb(100, 200, 200);
+
+}
+
+#projPage {
+	position: relative;
+	top: 100px;
+
+}
+
+
+/* ------------------------------------------
+this ends Project page styles 
 
 begins contact page section styles here -->
 ------------------------------------------- */
@@ -180,9 +228,12 @@ begins contact page section styles here -->
 	outline: none;
 }
 
-.formCont {
+#formCont {
+	position: relative;
+	top: 110px;
 	width: 100%;
 	padding: 0 5%;
+	padding-bottom: 100px;
 
 }
 input, textarea, button {
@@ -190,36 +241,49 @@ input, textarea, button {
 
 }
 #name, #lastName, #eMail, #textarea {
-	padding: 10px 0;
-	margin-left: 25px;
+	padding: 10px 30% 10px 0;
 	margin-bottom: 50px;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 	border-bottom-color: rgb(225, 225, 225);
 }
 
-.button:hover {
-	padding: 20px;
-	margin-bottom: 50px;
-		font-size: 28px;
-	background-color: rgb(1, 254, 127);
-	color: rgb(0, 0, 0)
+#name {
+		margin-right: 25px;
+}
 
+.btnCont {
+	position: relative;
+	padding-bottom: 50px
 }
 
 .button {
+	position: absolute;
 	padding: 20px;
-	margin-bottom: 50px;
 	background-color: rgb(0, 175, 175);
 	color: rgb(200, 200, 200);
-	transition: color 1.5s ease-out .25s, background 1.5s ease-in .25s, font-size 1.5s ease-out .25s;;
+	transition: color 1s ease-out .25s, background .2s ease-out .25s, font-size .05s ease-out .25s;
+}
+
+.button:hover {
+	font-size: 28px;
+	background-color: rgb(1, 254, 127);
+	color: rgb(0, 0, 0)
+}
+
+.button:active {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	border-left: 5px solid rgb(0, 224, 97);
+	border-top: 5px solid rgb(0, 224, 97);
 }
 
 .fa-paper-plane:hover {
 	color: rgb(200, 200, 200)
 }
 
-#myDisplay {
+/*#myMessage {
 	position: fixed;
 	top: 10px;
     width: 100%;
@@ -229,7 +293,7 @@ input, textarea, button {
 	background-color: rgba(0, 0, 0, .3)
     margin-top:20px;
 }
-
+*/
 
 
 
